@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aalim — Privacy Policy &amp; Terms of Service</title>
+    <meta name="description" content="Aalim privacy policy and terms of service, in English and Arabic." />
+    <meta name="robots" content="index, follow" />
+    <!-- GENERATED FILE — DO NOT EDIT BY HAND.
+         Written by build.mjs from src/terms-content.js in the max-ai repo.
+         Editing here creates a second copy of the policy, which is exactly how
+         this page came to contradict the app in three places. Change the app's
+         text, then regenerate:
+             node build.mjs /path/to/max-ai/src/terms-content.js -->
+    <style>
+      :root {
+        --bg: #F7F6F3; --fg: #16223A; --muted: #5A6273; --gold: #A88536;
+        --rule: #E2DFD8; --card: #FFFFFF;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #12161F; --fg: #E8EAF0; --muted: #A6AEBF; --gold: #C8A44D;
+                --rule: #262C3A; --card: #171C27; }
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--bg); color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        line-height: 1.7; -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 80px; }
+      header { border-bottom: 1px solid var(--rule); padding-bottom: 22px; margin-bottom: 8px; }
+      .mark { font-family: Georgia, 'Times New Roman', serif; font-size: 34px;
+              font-weight: 700; color: var(--gold); line-height: 1.1; }
+      .en-mark { font-size: 13px; letter-spacing: 0.18em; color: var(--muted);
+                 text-transform: uppercase; margin-top: 4px; }
+      h1 { font-size: 25px; margin: 24px 0 6px; }
+      .meta { color: var(--muted); font-size: 14px; margin: 0; }
+      .langs { display: flex; gap: 8px; margin: 22px 0 0; }
+      .langs button {
+        font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+        padding: 8px 18px; min-height: 40px; border-radius: 999px;
+        border: 1px solid var(--rule); background: transparent; color: var(--muted);
+      }
+      .langs button[aria-pressed='true'] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+      section { border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 26px; }
+      h2 { font-size: 18px; margin: 0 0 10px; color: var(--gold); }
+      p { margin: 0 0 12px; }
+      ul { margin: 0 0 12px; padding-inline-start: 22px; }
+      li { margin-bottom: 7px; }
+      a { color: var(--gold); overflow-wrap: anywhere; }
+      [dir='rtl'] { text-align: right; }
+      [hidden] { display: none !important; }
+      footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--rule);
+               color: var(--muted); font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="mark">عالم</div>
+        <div class="en-mark">Aalim</div>
+        <h1 id="title">Privacy Policy &amp; Terms of Service</h1>
+        <p class="meta" id="meta"
+           data-en="{{META_EN}}"
+           data-ar="{{META_AR}}">{{META_EN}}</p>
+        <div class="langs">
+          <button type="button" id="btn-en" aria-pressed="true">English</button>
+          <button type="button" id="btn-ar" aria-pressed="false">العربية</button>
+        </div>
+      </header>
+
+      <main id="doc-en" dir="ltr" lang="en">
+        {{INTRO_EN}}
+
+{{SECTIONS_EN}}
+      </main>
+
+      <main id="doc-ar" dir="rtl" lang="ar" hidden>
+        {{INTRO_AR}}
+
+{{SECTIONS_AR}}
+      </main>
+
+      <footer>
+        <p id="foot">Aalim · Kuwait · maxcapitalkw@gmail.com · <a href="support.html">Support</a></p>
+      </footer>
+    </div>
+
+    <script>
+      // The only script on the page. No storage, no cookies, no network — a
+      // privacy policy should not itself collect anything, and an App Store
+      // reviewer should be able to read either language with one tap.
+      var en = document.getElementById('doc-en')
+      var ar = document.getElementById('doc-ar')
+      var bEn = document.getElementById('btn-en')
+      var bAr = document.getElementById('btn-ar')
+      var title = document.getElementById('title')
+      function show(lang) {
+        var isAr = lang === 'ar'
+        en.hidden = isAr
+        ar.hidden = !isAr
+        bEn.setAttribute('aria-pressed', String(!isAr))
+        bAr.setAttribute('aria-pressed', String(isAr))
+        document.documentElement.lang = isAr ? 'ar' : 'en'
+        title.textContent = isAr ? 'سياسة الخصوصية وشروط الاستخدام' : 'Privacy Policy & Terms of Service'
+        var meta = document.getElementById('meta')
+        meta.textContent = meta.getAttribute(isAr ? 'data-ar' : 'data-en')
+        meta.setAttribute('dir', isAr ? 'rtl' : 'ltr')
+        document.getElementById('foot').setAttribute('dir', isAr ? 'rtl' : 'ltr')
+        if (location.hash !== (isAr ? '#ar' : '#en')) history.replaceState(null, '', isAr ? '#ar' : '#en')
+      }
+      bEn.addEventListener('click', function () { show('en') })
+      bAr.addEventListener('click', function () { show('ar') })
+      // Deep-linkable: /#ar opens Arabic directly, and an Arabic-preferring
+      // browser gets Arabic without touching anything.
+      if (location.hash === '#ar' || (!location.hash && (navigator.language || '').toLowerCase().indexOf('ar') === 0)) {
+        show('ar')
+      }
+    </script>
+  </body>
+</html>

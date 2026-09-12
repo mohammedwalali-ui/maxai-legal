@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aalim — Support</title>
+    <meta name="description" content="Support for Aalim: how to contact us, how to delete your account, and where to read the terms and privacy policy." />
+    <meta name="robots" content="index, follow" />
+    <!-- The stylesheet below is shared with index.html. verify.mjs asserts the
+         two blocks stay byte-identical, so the two pages cannot drift apart
+         visually without the check failing. -->
+    <style>
+      :root {
+        --bg: #F7F6F3; --fg: #16223A; --muted: #5A6273; --gold: #A88536;
+        --rule: #E2DFD8; --card: #FFFFFF;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #12161F; --fg: #E8EAF0; --muted: #A6AEBF; --gold: #C8A44D;
+                --rule: #262C3A; --card: #171C27; }
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--bg); color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        line-height: 1.7; -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 80px; }
+      header { border-bottom: 1px solid var(--rule); padding-bottom: 22px; margin-bottom: 8px; }
+      .mark { font-family: Georgia, 'Times New Roman', serif; font-size: 34px;
+              font-weight: 700; color: var(--gold); line-height: 1.1; }
+      .en-mark { font-size: 13px; letter-spacing: 0.18em; color: var(--muted);
+                 text-transform: uppercase; margin-top: 4px; }
+      h1 { font-size: 25px; margin: 24px 0 6px; }
+      .meta { color: var(--muted); font-size: 14px; margin: 0; }
+      .langs { display: flex; gap: 8px; margin: 22px 0 0; }
+      .langs button {
+        font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+        padding: 8px 18px; min-height: 40px; border-radius: 999px;
+        border: 1px solid var(--rule); background: transparent; color: var(--muted);
+      }
+      .langs button[aria-pressed='true'] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+      section { border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 26px; }
+      h2 { font-size: 18px; margin: 0 0 10px; color: var(--gold); }
+      p { margin: 0 0 12px; }
+      ul { margin: 0 0 12px; padding-inline-start: 22px; }
+      li { margin-bottom: 7px; }
+      a { color: var(--gold); overflow-wrap: anywhere; }
+      [dir='rtl'] { text-align: right; }
+      [hidden] { display: none !important; }
+      footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--rule);
+               color: var(--muted); font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="mark">عالم</div>
+        <div class="en-mark">Aalim</div>
+        <h1 id="title">Support</h1>
+        <p class="meta" id="meta"
+           data-en="Aalim · Kuwait · maxcapitalkw@gmail.com"
+           data-ar="عالِم · الكويت · maxcapitalkw@gmail.com">Aalim · Kuwait · maxcapitalkw@gmail.com</p>
+        <div class="langs">
+          <button type="button" id="btn-en" aria-pressed="true">English</button>
+          <button type="button" id="btn-ar" aria-pressed="false">العربية</button>
+        </div>
+      </header>
+
+      <main id="doc-en" dir="ltr" lang="en">
+    <section>
+      <h2>What Aalim is</h2>
+      <p>Aalim is an AI assistant for Kuwait and the Gulf. You ask it something in Arabic or English and it answers — it can also remember what you tell it about yourself, read a PDF or photo you attach, and make an image from a description.</p>
+      <p>It is not a licensed financial advisor, lawyer, doctor or Islamic scholar, and it can be wrong. Check anything important against an official source.</p>
+    </section>
+
+    <section>
+      <h2>Contact us</h2>
+      <p>Email <a href="mailto:maxcapitalkw@gmail.com">maxcapitalkw@gmail.com</a> for any question, problem, or request about your data.</p>
+      <p>Aalim is built and run by one developer, so replies come from a person rather than a support desk. Expect an answer within a few days. There is no phone line — email is the only way to reach us, and it is read.</p>
+    </section>
+
+    <section>
+      <h2>Deleting your account</h2>
+      <p>You can do it yourself, in the app, without asking us:</p>
+      <ul><li>Open <strong>Settings</strong></li><li>Scroll to <strong>Danger zone</strong></li><li>Tap <strong>Delete account</strong></li><li>Type <strong>DELETE</strong> to confirm, then tap <strong>Delete forever</strong></li></ul>
+      <p>It starts immediately and cannot be undone. It removes your profile, all your chats, your projects and saved memory, the images Aalim made for you, and the notifications registered to your devices.</p>
+      <p>If you cannot sign in, we will delete the account for you — email us from the address the account is registered to, so we can tell whose account it is. The full detail, including what deletion cannot reach, is on the <a href="delete.html">account deletion page</a>.</p>
+    </section>
+
+    <section>
+      <h2>Terms, privacy, and who receives your data</h2>
+      <ul><li><a href="index.html">Privacy Policy &amp; Terms of Service</a> — the full document, both languages</li><li><a href="https://maxaikw.com/terms" rel="noopener">maxaikw.com/terms</a> — the same text inside the app</li><li><a href="https://maxaikw.com/services" rel="noopener">maxaikw.com/services</a> — the companies Aalim uses, and what each one receives</li></ul>
+      <p>What you write goes to Google Gemini, which answers you. Section 4 of the Privacy Policy sets out every other kind of service involved and what it receives.</p>
+    </section>
+      </main>
+
+      <main id="doc-ar" dir="rtl" lang="ar" hidden>
+    <section>
+      <h2>شنو هو عالِم</h2>
+      <p>عالِم مساعد ذكاء اصطناعي للكويت والخليج. تسأله بالعربي أو بالإنجليزي ويجاوبك — ويقدر بعد يتذكر اللي تقوله عن نفسك، ويقرأ ملف PDF أو صورة ترفقها، ويسوي لك صورة من وصف تكتبه.</p>
+      <p>هو ما هو مستشار مالي مرخّص ولا محامي ولا طبيب ولا عالم شرعي، ويمكن يغلط. أي شي مهم تأكد منه من مصدر رسمي.</p>
+    </section>
+
+    <section>
+      <h2>تواصل معنا</h2>
+      <p>راسلنا على <a href="mailto:maxcapitalkw@gmail.com">maxcapitalkw@gmail.com</a> لأي سؤال أو مشكلة أو طلب يخص بياناتك.</p>
+      <p>عالِم يبنيه ويشغّله مطوّر واحد، فالرد يجيك من شخص مو من فريق دعم. توقّع الرد خلال أيام. ما في خط هاتف — الإيميل هو الطريقة الوحيدة للوصول لنا، وهو مقروء.</p>
+    </section>
+
+    <section>
+      <h2>حذف حسابك</h2>
+      <p>تقدر تسويه بنفسك، من داخل التطبيق، بدون ما تطلب منّا شي:</p>
+      <ul><li>افتح <strong>الإعدادات</strong></li><li>انزل لـ <strong>منطقة الخطر</strong></li><li>اضغط <strong>حذف الحساب</strong></li><li>اكتب <strong>امسح</strong> للتأكيد، وبعدها اضغط <strong>حذف نهائي</strong></li></ul>
+      <p>الحذف يبدأ على طول وما يرجع. يشيل ملفك الشخصي، وكل محادثاتك، ومشاريعك والمحفوظات، والصور اللي سواها لك عالِم، وإشعارات أجهزتك.</p>
+      <p>إذا ما تقدر تسجّل دخول، إحنا نحذف الحساب عنك — راسلنا من نفس الإيميل المسجّل بالحساب، عشان نعرف الحساب لمين. التفاصيل الكاملة، ومنها شنو ما يقدر الحذف يوصل له، موجودة في <a href="delete.html">صفحة حذف الحساب</a>.</p>
+    </section>
+
+    <section>
+      <h2>الشروط والخصوصية ومن يستلم بياناتك</h2>
+      <ul><li><a href="index.html">سياسة الخصوصية وشروط الاستخدام</a> — المستند الكامل، باللغتين</li><li><a href="https://maxaikw.com/terms" rel="noopener">maxaikw.com/terms</a> — نفس النص داخل التطبيق</li><li><a href="https://maxaikw.com/services" rel="noopener">maxaikw.com/services</a> — الشركات اللي يستخدمها عالِم، ووش تستلم كل واحدة</li></ul>
+      <p>اللي تكتبه يوصل إلى Google Gemini، وهو اللي يجاوبك. القسم 4 من سياسة الخصوصية يوضّح كل نوع خدمة ثانية له علاقة، ووش يستلم.</p>
+    </section>
+      </main>
+
+      <footer>
+        <p id="foot">Aalim · Kuwait · maxcapitalkw@gmail.com · <a href="index.html">Privacy Policy &amp; Terms</a></p>
+      </footer>
+    </div>
+
+    <script>
+      // Same switcher as the policy page: no storage, no cookies, no network.
+      // A support page an App Store reviewer opens must not itself collect
+      // anything, and must read in either language with one tap.
+      var en = document.getElementById('doc-en')
+      var ar = document.getElementById('doc-ar')
+      var bEn = document.getElementById('btn-en')
+      var bAr = document.getElementById('btn-ar')
+      var title = document.getElementById('title')
+      function show(lang) {
+        var isAr = lang === 'ar'
+        en.hidden = isAr
+        ar.hidden = !isAr
+        bEn.setAttribute('aria-pressed', String(!isAr))
+        bAr.setAttribute('aria-pressed', String(isAr))
+        document.documentElement.lang = isAr ? 'ar' : 'en'
+        title.textContent = isAr ? 'الدعم والمساعدة' : 'Support'
+        var meta = document.getElementById('meta')
+        meta.textContent = meta.getAttribute(isAr ? 'data-ar' : 'data-en')
+        meta.setAttribute('dir', isAr ? 'rtl' : 'ltr')
+        document.getElementById('foot').setAttribute('dir', isAr ? 'rtl' : 'ltr')
+        if (location.hash !== (isAr ? '#ar' : '#en')) history.replaceState(null, '', isAr ? '#ar' : '#en')
+      }
+      bEn.addEventListener('click', function () { show('en') })
+      bAr.addEventListener('click', function () { show('ar') })
+      if (location.hash === '#ar' || (!location.hash && (navigator.language || '').toLowerCase().indexOf('ar') === 0)) {
+        show('ar')
+      }
+    </script>
+  </body>
+</html>
